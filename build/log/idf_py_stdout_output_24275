@@ -1,0 +1,111 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7524
+load:0x40078000,len:16552
+load:0x40080400,len:4
+load:0x40080404,len:4312
+entry 0x4008065c
+[0;32mI (29) boot: ESP-IDF v5.4-dev-790-gc7bbfaee25 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 20 2024 16:13:43[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (44) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (49) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (53) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (63) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (74) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (89) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=650fch (413948) map[0m
+[0;32mI (216) esp_image: segment 1: paddr=00075124 vaddr=3ffb0000 size=023a0h (  9120) load[0m
+[0;32mI (218) esp_image: segment 2: paddr=000774cc vaddr=40080000 size=08b4ch ( 35660) load[0m
+[0;32mI (232) esp_image: segment 3: paddr=00080020 vaddr=400d0020 size=361e8h (221672) map[0m
+[0;32mI (289) esp_image: segment 4: paddr=000b6210 vaddr=40088b4c size=07e78h ( 32376) load[0m
+[0;32mI (308) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (308) boot: Disabling RNG early entropy source...[0m
+[0;32mI (319) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (319) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (320) esp_psram: Speed: 80MHz[0m
+[0;32mI (321) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (329) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (338) cpu_start: Multicore app[0m
+[0;32mI (809) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (817) cpu_start: Pro cpu start user code[0m
+[0;32mI (817) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (817) app_init: Application information:[0m
+[0;32mI (820) app_init: Project name:     person_detection[0m
+[0;32mI (825) app_init: App version:      31e93a2-dirty[0m
+[0;32mI (831) app_init: Compile time:     Jun 20 2024 16:13:34[0m
+[0;32mI (837) app_init: ELF file SHA256:  97a5fdda2...[0m
+[0;32mI (842) app_init: ESP-IDF:          v5.4-dev-790-gc7bbfaee25[0m
+[0;32mI (848) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (853) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (858) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (863) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (870) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (876) heap_init: At 3FFB31B0 len 0002CE50 (179 KiB): DRAM[0m
+[0;32mI (882) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (889) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (895) heap_init: At 400909C4 len 0000F63C (61 KiB): IRAM[0m
+[0;32mI (901) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (909) spi_flash: detected chip: generic[0m
+[0;32mI (913) spi_flash: flash io: qio[0m
+[0;32mI (918) main_task: Started on CPU0[0m
+[0;32mI (928) main_task: Calling app_main()[0m
+[0;32mI (928) [esp_cli]: Registering command: mem-dump[0m
+[0;32mI (928) [esp_cli]: Registering command: task-dump[0m
+[0;32mI (928) [esp_cli]: Registering command: cpu-dump[0m
+[0;32mI (938) [esp_cli]: Registering command: detect_image[0m
+[5n
+Type 'help' to get the list of commands.
+Use UP/DOWN arrows to navigate through command history.
+Press TAB when typing command name to auto-complete.
+
+Your terminal application does not support escape sequences.
+
+Line editing and history features are disabled.
+
+On Windows, try using Putty instead.
+esp> e detect_image 1
+
+Image Quantization Cycles = 239864
+Image Quantization Instructions = 73812
+Image Quantization CPI = 3.249661
+Invoke Cycles = 89203229
+Invoke Instructions = 55301528
+Invoke CPI = 1.613034
+
+Chihuahua score = 32%
+Border Collie score = -31%
+
+Image Quantization Time = 998 ms
+Response Time = 11325
+Response Cycles = 2788018
+Response Instructions = 42930
+Response CPI = 64.943352
+Total Cycles = 92231111
+Total Instructions = 55418270
+Average CPI of the project = 1.664273
+
+Total time = 397090 ms
+Softmax time = 118 ms
+FC time = 23876 ms
+DC time = 0 ms
+conv time = 335832 ms
+Pooling time = 11514 ms
+add time = 0 ms
+mul time = 0 ms
+Layers time 371340 ms
+Meassure total time  383663 ms
+[0;32mI (4868) [esp_cli]: Time required for the inference is 422 ms[0m
+esp> 
