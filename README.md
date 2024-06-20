@@ -83,4 +83,4 @@ There are 10 [images](static_images/sample_images/README.md) embedded into the a
 detect_image <image_number>
 ```
 where `<image_number>` is in [0, 9]. 
-The output is person and no_person score printed on the log screen.
+The output is border_collie and chihuahua score printed on the log screen.
