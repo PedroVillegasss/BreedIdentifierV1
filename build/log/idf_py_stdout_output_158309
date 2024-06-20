@@ -1,0 +1,68 @@
+[1/5] cd /home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/esp-idf/esptool_py && /home/pedrovillegasss/esp/idf-tools/python_env/idf5.4_py3.10_env/bin/python /home/pedrovillegasss/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/partition_table/partition-table.bin /home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/person_detection.bin
+person_detection.bin binary size 0xadd30 bytes. Smallest app partition is 0x180000 bytes. 0xd22d0 bytes (55%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/bootloader/esp-idf/esptool_py && /home/pedrovillegasss/esp/idf-tools/python_env/idf5.4_py3.10_env/bin/python /home/pedrovillegasss/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x6f50 bytes. 0xb0 bytes (1%) free.
+[2/3] cd /home/pedrovillegasss/esp/idf/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/pedrovillegasss/esp/idf/esp-idf -D "SERIAL_TOOL=/home/pedrovillegasss/esp/idf-tools/python_env/idf5.4_py3.10_env/bin/python;;/home/pedrovillegasss/esp/idf/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build -P /home/pedrovillegasss/esp/idf/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 person_detection.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev4
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WDQ6-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 34:98:7a:b6:f2:28
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000bdfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 28496 bytes to 17358...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007a41... (100 %)
+Wrote 28496 bytes (17358 compressed) at 0x00001000 in 0.8 seconds (effective 296.3 kbit/s)...
+Hash of data verified.
+Compressed 711984 bytes to 461676...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cbd3... (6 %)
+Writing at 0x00023202... (10 %)
+Writing at 0x0002972d... (13 %)
+Writing at 0x0002e534... (17 %)
+Writing at 0x00032f04... (20 %)
+Writing at 0x00037a33... (24 %)
+Writing at 0x0003e0b5... (27 %)
+Writing at 0x00042cb3... (31 %)
+Writing at 0x00049582... (34 %)
+Writing at 0x0004e04b... (37 %)
+Writing at 0x00057e1d... (41 %)
+Writing at 0x0005e31a... (44 %)
+Writing at 0x000630b0... (48 %)
+Writing at 0x00067ddc... (51 %)
+Writing at 0x0006d1c5... (55 %)
+Writing at 0x000732d9... (58 %)
+Writing at 0x0007b575... (62 %)
+Writing at 0x0008102a... (65 %)
+Writing at 0x000863dd... (68 %)
+Writing at 0x0008bc5c... (72 %)
+Writing at 0x00090d72... (75 %)
+Writing at 0x00095e2e... (79 %)
+Writing at 0x0009b13c... (82 %)
+Writing at 0x000a06cc... (86 %)
+Writing at 0x000a808f... (89 %)
+Writing at 0x000b0fe7... (93 %)
+Writing at 0x000b6f81... (96 %)
+Writing at 0x000bca6e... (100 %)
+Wrote 711984 bytes (461676 compressed) at 0x00010000 in 10.6 seconds (effective 536.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 488.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
