@@ -5,6 +5,8 @@ network to recognize Border Collie vs Chihuahua in images captured by a camera. 
 run on systems with small amounts of memory such as microcontrollers and DSPs.
 This uses the experimental int8 quantized version of the border-collie-chihuahua detection model. 
 
+![descarga](https://github.com/PedroVillegasss/neuronal-network/assets/127313865/98c3ac8d-2072-415b-a079-440f41836d1f)
+
 ## Deploy to ESP32
 
 The following instructions will help you build and deploy this sample
