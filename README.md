@@ -1,9 +1,9 @@
-# Person detection example
+# Border Collie vs Chihuahua (based on the person-detection Tensorflow Lite example)
 
 This example shows how you can use Tensorflow Lite to run a 250 kilobyte neural
-network to recognize people in images captured by a camera.  It is designed to
+network to recognize Border Collie vs Chihuahua in images captured by a camera.  It is designed to
 run on systems with small amounts of memory such as microcontrollers and DSPs.
-This uses the experimental int8 quantized version of the person detection model.
+This uses the experimental int8 quantized version of the border-collie-chihuahua detection model. 
 
 ## Deploy to ESP32
 
