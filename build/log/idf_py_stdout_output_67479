@@ -1,0 +1,63 @@
+[1/5] cd /home/pedrovillegasss/nn-project/neuronal-network/build/esp-idf/esptool_py && /home/pedrovillegasss/esp/idf-tools/python_env/idf5.3_py3.10_env/bin/python /home/pedrovillegasss/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/pedrovillegasss/nn-project/neuronal-network/build/partition_table/partition-table.bin /home/pedrovillegasss/nn-project/neuronal-network/build/person_detection.bin
+person_detection.bin binary size 0x9cba0 bytes. Smallest app partition is 0x180000 bytes. 0xe3460 bytes (59%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/pedrovillegasss/nn-project/neuronal-network/build/bootloader/esp-idf/esptool_py && /home/pedrovillegasss/esp/idf-tools/python_env/idf5.3_py3.10_env/bin/python /home/pedrovillegasss/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/pedrovillegasss/nn-project/neuronal-network/build/bootloader/bootloader.bin
+Bootloader binary size 0x6f50 bytes. 0xb0 bytes (1%) free.
+[2/3] cd /home/pedrovillegasss/esp/idf/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/pedrovillegasss/esp/idf/esp-idf -D "SERIAL_TOOL=/home/pedrovillegasss/esp/idf-tools/python_env/idf5.3_py3.10_env/bin/python;;/home/pedrovillegasss/esp/idf/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/pedrovillegasss/nn-project/neuronal-network/build -P /home/pedrovillegasss/esp/idf/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 person_detection.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev3
+Serial port /dev/ttyUSB0
+Connecting......
+Chip is ESP32-D0WDQ6-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 34:98:7a:b6:f2:28
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000acfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 28496 bytes to 17350...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007a4b... (100 %)
+Wrote 28496 bytes (17350 compressed) at 0x00001000 in 0.8 seconds (effective 296.5 kbit/s)...
+Hash of data verified.
+Compressed 641952 bytes to 393084...
+Writing at 0x00010000... (4 %)
+Writing at 0x0001d7c9... (8 %)
+Writing at 0x00024fa1... (12 %)
+Writing at 0x0002abb6... (16 %)
+Writing at 0x0003020d... (20 %)
+Writing at 0x00034c16... (25 %)
+Writing at 0x000396d4... (29 %)
+Writing at 0x0003e3ec... (33 %)
+Writing at 0x000449a3... (37 %)
+Writing at 0x0004971e... (41 %)
+Writing at 0x0004fd37... (45 %)
+Writing at 0x00059446... (50 %)
+Writing at 0x00061de7... (54 %)
+Writing at 0x0006b84e... (58 %)
+Writing at 0x0007155a... (62 %)
+Writing at 0x0007692a... (66 %)
+Writing at 0x0007c032... (70 %)
+Writing at 0x0008115c... (75 %)
+Writing at 0x00086454... (79 %)
+Writing at 0x0008c00e... (83 %)
+Writing at 0x00092b62... (87 %)
+Writing at 0x0009830c... (91 %)
+Writing at 0x000a0a20... (95 %)
+Writing at 0x000a6d5a... (100 %)
+Wrote 641952 bytes (393084 compressed) at 0x00010000 in 9.1 seconds (effective 562.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 476.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

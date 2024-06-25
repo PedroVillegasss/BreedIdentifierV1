@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/CMakeFiles/bootloader
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/CMakeFiles/bootloader.rule
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/CMakeFiles/bootloader-complete.rule
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/pedrovillegasss/nn-project/neuronal-network/build/CMakeFiles/bootloader
+/home/pedrovillegasss/nn-project/neuronal-network/build/CMakeFiles/bootloader.rule
+/home/pedrovillegasss/nn-project/neuronal-network/build/CMakeFiles/bootloader-complete.rule
+/home/pedrovillegasss/nn-project/neuronal-network/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/pedrovillegasss/nn-project/neuronal-network/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/pedrovillegasss/nn-project/neuronal-network/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/pedrovillegasss/nn-project/neuronal-network/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/pedrovillegasss/nn-project/neuronal-network/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/pedrovillegasss/nn-project/neuronal-network/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/pedrovillegasss/nn-project/neuronal-network/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -1,4 +1,4 @@
-/* * Data converted from /home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/static_images/sample_images/image2
+/* * Data converted from /home/pedrovillegasss/nn-project/neuronal-network/static_images/sample_images/image2
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

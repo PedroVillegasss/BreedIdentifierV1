@@ -1,4 +1,4 @@
-# Install script for directory: /home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection
+# Install script for directory: /home/pedrovillegasss/nn-project/neuronal-network
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/pedrovillegasss/esp/idf-tools/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump")
+  set(CMAKE_OBJDUMP "/home/pedrovillegasss/esp/idf-tools/tools/xtensa-esp-elf/esp-13.2.0_20240305/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/esp-idf/cmake_install.cmake")
+  include("/home/pedrovillegasss/nn-project/neuronal-network/build/esp-idf/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pedrovillegasss/nn-project/neuronal-network/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

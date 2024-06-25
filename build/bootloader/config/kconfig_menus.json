@@ -123,16 +123,6 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_PHY_SUPPORTED",
-        "name": "SOC_PHY_SUPPORTED",
-        "range": null,
-        "title": null,
-        "type": "bool"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
         "id": "SOC_WIFI_SUPPORTED",
         "name": "SOC_WIFI_SUPPORTED",
         "range": null,
@@ -445,26 +435,6 @@
         "help": null,
         "id": "SOC_DEEP_SLEEP_SUPPORTED",
         "name": "SOC_DEEP_SLEEP_SUPPORTED",
-        "range": null,
-        "title": null,
-        "type": "bool"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "SOC_LP_PERIPH_SHARE_INTERRUPT",
-        "name": "SOC_LP_PERIPH_SHARE_INTERRUPT",
-        "range": null,
-        "title": null,
-        "type": "bool"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "SOC_PM_SUPPORTED",
-        "name": "SOC_PM_SUPPORTED",
         "range": null,
         "title": null,
         "type": "bool"
@@ -883,28 +853,8 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_GPIO_CLOCKOUT_CHANNEL_NUM",
-        "name": "SOC_GPIO_CLOCKOUT_CHANNEL_NUM",
-        "range": null,
-        "title": null,
-        "type": "int"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
         "id": "SOC_I2C_NUM",
         "name": "SOC_I2C_NUM",
-        "range": null,
-        "title": null,
-        "type": "int"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "SOC_HP_I2C_NUM",
-        "name": "SOC_HP_I2C_NUM",
         "range": null,
         "title": null,
         "type": "int"
@@ -2323,16 +2273,6 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_BT_H2C_ENC_KEY_CTRL_ENH_VSC_SUPPORTED",
-        "name": "SOC_BT_H2C_ENC_KEY_CTRL_ENH_VSC_SUPPORTED",
-        "range": null,
-        "title": null,
-        "type": "bool"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
         "id": "SOC_ULP_HAS_ADC",
         "name": "SOC_ULP_HAS_ADC",
         "range": null,
@@ -2863,138 +2803,82 @@
             {
                 "children": [
                     {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
-                                "help": null,
-                                "id": "BOOTLOADER_LOG_LEVEL_NONE",
-                                "name": "BOOTLOADER_LOG_LEVEL_NONE",
-                                "range": null,
-                                "title": "No output",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
-                                "help": null,
-                                "id": "BOOTLOADER_LOG_LEVEL_ERROR",
-                                "name": "BOOTLOADER_LOG_LEVEL_ERROR",
-                                "range": null,
-                                "title": "Error",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
-                                "help": null,
-                                "id": "BOOTLOADER_LOG_LEVEL_WARN",
-                                "name": "BOOTLOADER_LOG_LEVEL_WARN",
-                                "range": null,
-                                "title": "Warning",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
-                                "help": null,
-                                "id": "BOOTLOADER_LOG_LEVEL_INFO",
-                                "name": "BOOTLOADER_LOG_LEVEL_INFO",
-                                "range": null,
-                                "title": "Info",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
-                                "help": null,
-                                "id": "BOOTLOADER_LOG_LEVEL_DEBUG",
-                                "name": "BOOTLOADER_LOG_LEVEL_DEBUG",
-                                "range": null,
-                                "title": "Debug",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
-                                "help": null,
-                                "id": "BOOTLOADER_LOG_LEVEL_VERBOSE",
-                                "name": "BOOTLOADER_LOG_LEVEL_VERBOSE",
-                                "range": null,
-                                "title": "Verbose",
-                                "type": "bool"
-                            }
-                        ],
-                        "depends_on": null,
-                        "help": "Specify how much output to see in bootloader logs.",
-                        "id": "bootloader-config-log-bootloader-log-verbosity",
-                        "name": "BOOTLOADER_LOG_LEVEL",
-                        "title": "Bootloader log verbosity",
-                        "type": "choice"
+                        "children": [],
+                        "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
+                        "help": null,
+                        "id": "BOOTLOADER_LOG_LEVEL_NONE",
+                        "name": "BOOTLOADER_LOG_LEVEL_NONE",
+                        "range": null,
+                        "title": "No output",
+                        "type": "bool"
                     },
                     {
                         "children": [],
-                        "depends_on": null,
+                        "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
                         "help": null,
-                        "id": "BOOTLOADER_LOG_LEVEL",
-                        "name": "BOOTLOADER_LOG_LEVEL",
+                        "id": "BOOTLOADER_LOG_LEVEL_ERROR",
+                        "name": "BOOTLOADER_LOG_LEVEL_ERROR",
                         "range": null,
-                        "title": null,
-                        "type": "int"
+                        "title": "Error",
+                        "type": "bool"
                     },
                     {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "Use ANSI terminal colors in log output\nEnable ANSI terminal color codes.\nIn order to view these, your terminal program must support ANSI color codes.",
-                                "id": "BOOTLOADER_LOG_COLORS",
-                                "name": "BOOTLOADER_LOG_COLORS",
-                                "range": null,
-                                "title": "Color",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "depends_on": "No && <choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
-                                        "help": null,
-                                        "id": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_NONE",
-                                        "name": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_NONE",
-                                        "range": null,
-                                        "title": "None",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
-                                        "help": null,
-                                        "id": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_CPU_TICKS",
-                                        "name": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_CPU_TICKS",
-                                        "range": null,
-                                        "title": "Milliseconds Since Boot",
-                                        "type": "bool"
-                                    }
-                                ],
-                                "depends_on": null,
-                                "help": "Choose what sort of timestamp is displayed in the log output:\n\n- \"None\" - The log will only contain the actual log messages themselves\n  without any time-related information. Avoiding timestamps can help conserve\n  processing power and memory. It might useful when you\n  perform log analysis or debugging, sometimes it's more straightforward\n  to work with logs that lack timestamps, especially if the time of occurrence\n  is not critical for understanding the issues.\n  \"I log_test: info message\"\n\n- \"Milliseconds since boot\" is calculated from the RTOS tick count multiplied\n  by the tick period. This time will reset after a software reboot.\n  \"I (112500) log_test: info message\"",
-                                "id": "bootloader-config-log-format-timestamp",
-                                "name": "BOOTLOADER_LOG_TIMESTAMP_SOURCE",
-                                "title": "Timestamp",
-                                "type": "choice"
-                            }
-                        ],
-                        "depends_on": null,
-                        "id": "bootloader-config-log-format",
-                        "title": "Format",
-                        "type": "menu"
+                        "children": [],
+                        "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
+                        "help": null,
+                        "id": "BOOTLOADER_LOG_LEVEL_WARN",
+                        "name": "BOOTLOADER_LOG_LEVEL_WARN",
+                        "range": null,
+                        "title": "Warning",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
+                        "help": null,
+                        "id": "BOOTLOADER_LOG_LEVEL_INFO",
+                        "name": "BOOTLOADER_LOG_LEVEL_INFO",
+                        "range": null,
+                        "title": "Info",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
+                        "help": null,
+                        "id": "BOOTLOADER_LOG_LEVEL_DEBUG",
+                        "name": "BOOTLOADER_LOG_LEVEL_DEBUG",
+                        "range": null,
+                        "title": "Debug",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice BOOTLOADER_LOG_LEVEL>",
+                        "help": null,
+                        "id": "BOOTLOADER_LOG_LEVEL_VERBOSE",
+                        "name": "BOOTLOADER_LOG_LEVEL_VERBOSE",
+                        "range": null,
+                        "title": "Verbose",
+                        "type": "bool"
                     }
                 ],
                 "depends_on": null,
-                "id": "bootloader-config-log",
-                "title": "Log",
-                "type": "menu"
+                "help": "Specify how much output to see in bootloader logs.",
+                "id": "bootloader-config-bootloader-log-verbosity",
+                "name": "BOOTLOADER_LOG_LEVEL",
+                "title": "Bootloader log verbosity",
+                "type": "choice"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "BOOTLOADER_LOG_LEVEL",
+                "name": "BOOTLOADER_LOG_LEVEL",
+                "range": null,
+                "title": null,
+                "type": "int"
             },
             {
                 "children": [
@@ -3063,17 +2947,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": null,
-                        "help": "This is a helper config for 32bits address quad flash. Invisible for users.",
-                        "id": "BOOTLOADER_FLASH_NEEDS_32BIT_ADDR_QUAD_FLASH",
-                        "name": "BOOTLOADER_FLASH_NEEDS_32BIT_ADDR_QUAD_FLASH",
-                        "range": null,
-                        "title": null,
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "BOOTLOADER_FLASH_NEEDS_32BIT_ADDR_QUAD_FLASH && IDF_EXPERIMENTAL_FEATURES",
+                        "depends_on": "BOOTLOADER_FLASH_NEEDS_32BIT_FEAT && IDF_TARGET_ESP32S3 && IDF_EXPERIMENTAL_FEATURES",
                         "help": "Enabling this option allows the CPU to access 32-bit-address flash beyond 16M range.\n1. This option only valid for 4-line flash. Octal flash doesn't need this.\n2. This option is experimental, which means it can\u2019t use on all flash chips stable, for more\ninformation, please contact Espressif Business support.",
                         "id": "BOOTLOADER_CACHE_32BIT_ADDR_QUAD_FLASH",
                         "name": "BOOTLOADER_CACHE_32BIT_ADDR_QUAD_FLASH",
@@ -3330,7 +3204,7 @@
                             {
                                 "children": [],
                                 "depends_on": "BOOTLOADER_APP_ANTI_ROLLBACK",
-                                "help": "This option allows to emulate read/write operations with all eFuses and efuse secure version.\nIt allows to test anti-rollback implementation without permanent write eFuse bits.\nThere should be an entry in partition table with following details: `emul_efuse, data, efuse, , 0x2000`.\n\nThis option enables: EFUSE_VIRTUAL and EFUSE_VIRTUAL_KEEP_IN_FLASH.",
+                                "help": "This option allows to emulate read/write operations with all eFuses and efuse secure version.\nIt allows to test anti-rollback implemention without permanent write eFuse bits.\nThere should be an entry in partition table with following details: `emul_efuse, data, efuse, , 0x2000`.\n\nThis option enables: EFUSE_VIRTUAL and EFUSE_VIRTUAL_KEEP_IN_FLASH.",
                                 "id": "BOOTLOADER_EFUSE_SECURE_VERSION_EMULATE",
                                 "name": "BOOTLOADER_EFUSE_SECURE_VERSION_EMULATE",
                                 "range": null,
@@ -3400,7 +3274,7 @@
                     {
                         "children": [],
                         "depends_on": "BOOTLOADER_CUSTOM_RESERVE_RTC",
-                        "help": "This option allows the customer to use the legacy bootloader behavior when the\nRTC FAST memory CRC calculation takes place. When this option is enabled, the\nallocated user custom data will be taken into account in the CRC calculation.\nThis means that any change to the custom data would need a CRC update to prevent\nthe bootloader from marking this data as corrupted.\nIf this option is disabled, the custom data will not be taken into account when\ncalculating the RTC FAST memory CRC. The user custom data can be changed freely,\nwithout the need to update the CRC.\nTHIS OPTION MUST BE THE SAME FOR BOTH THE BOOTLOADER AND THE APPLICATION BUILDS.",
+                        "help": "This option allows the customer to use the legacy bootloader behavior when the\nRTC FAST memory CRC calculation takes place. When this option is enabled, the\nallocated user custom data will be taken into account in the CRC calculcation.\nThis means that any change to the custom data would need a CRC update to prevent\nthe bootloader from marking this data as corrupted.\nIf this option is disabled, the custom data will not be taken into account when\ncalculating the RTC FAST memory CRC. The user custom data can be changed freely,\nwithout the need to update the CRC.\nTHIS OPTION MUST BE THE SAME FOR BOTH THE BOOTLOADER AND THE APPLICATION BUILDS.",
                         "id": "BOOTLOADER_CUSTOM_RESERVE_RTC_IN_CRC",
                         "name": "BOOTLOADER_CUSTOM_RESERVE_RTC_IN_CRC",
                         "range": null,
@@ -3419,7 +3293,7 @@
                     }
                 ],
                 "depends_on": "SOC_RTC_FAST_MEM_SUPPORTED",
-                "help": "This option allows the customer to place data in the RTC FAST memory,\nthis area remains valid when rebooted, except for power loss.\nThis memory is located at a fixed address and is available\nfor both the bootloader and the application.\n(The application and bootloader must be compiled with the same option).\nThe RTC FAST memory has access only through PRO_CPU.",
+                "help": "This option allows the customer to place data in the RTC FAST memory,\nthis area remains valid when rebooted, except for power loss.\nThis memory is located at a fixed address and is available\nfor both the bootloader and the application.\n(The application and bootoloader must be compiled with the same option).\nThe RTC FAST memory has access only through PRO_CPU.",
                 "id": "BOOTLOADER_CUSTOM_RESERVE_RTC",
                 "name": "BOOTLOADER_CUSTOM_RESERVE_RTC",
                 "range": null,
@@ -3759,7 +3633,7 @@
             {
                 "children": [],
                 "depends_on": "SECURE_BOOT_V2_ENABLED && SECURE_BOOT_BUILD_SIGNED_BINARIES",
-                "help": "When Secure Boot V2 is enabled, by default the bootloader is not flashed along with other artifacts\nlike the application and the partition table images, i.e. bootloader has to be separately flashed\nusing the command `idf.py bootloader flash`, whereas, the application and partition table can be flashed\nusing the command `idf.py flash` itself.\nEnabling this option allows flashing the bootloader along with the other artifacts\nby invocation of the command `idf.py flash`.\n\nIf this option is enabled make sure that even the bootloader is signed using the correct secure boot key,\notherwise the bootloader signature verification would fail, as hash of the public key which is present in\nthe bootloader signature would not match with the digest stored into the efuses\nand thus the device will not be able to boot up.",
+                "help": "When Secure Boot V2 is enabled, by default the bootloader is not flashed along with other artifacts\nlike the application and the partition table images, i.e. bootloader has to be seperately flashed\nusing the command `idf.py bootloader flash`, whereas, the application and partition table can be flashed\nusing the command `idf.py flash` itself.\nEnabling this option allows flashing the bootloader along with the other artifacts\nby invocation of the command `idf.py flash`.\n\nIf this option is enabled make sure that even the bootloader is signed using the correct secure boot key,\notherwise the bootloader signature verification would fail, as hash of the public key which is present in\nthe bootloader signature would not match with the digest stored into the efuses\nand thus the device will not be able to boot up.",
                 "id": "SECURE_BOOT_FLASH_BOOTLOADER_DEFAULT",
                 "name": "SECURE_BOOT_FLASH_BOOTLOADER_DEFAULT",
                 "range": null,
@@ -4272,26 +4146,6 @@
         "range": null,
         "title": null,
         "type": "int"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "ESP_ROM_SUPPORT_DEEP_SLEEP_WAKEUP_STUB",
-        "name": "ESP_ROM_SUPPORT_DEEP_SLEEP_WAKEUP_STUB",
-        "range": null,
-        "title": null,
-        "type": "bool"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "ESP_ROM_HAS_OUTPUT_PUTC_FUNC",
-        "name": "ESP_ROM_HAS_OUTPUT_PUTC_FUNC",
-        "range": null,
-        "title": null,
-        "type": "bool"
     },
     {
         "children": [
@@ -5321,36 +5175,6 @@
                 "range": null,
                 "title": null,
                 "type": "string"
-            },
-            {
-                "children": [
-                    {
-                        "children": [],
-                        "depends_on": "<choice COMPILER_ORPHAN_SECTIONS>",
-                        "help": "Places orphan sections without a warning message.",
-                        "id": "COMPILER_ORPHAN_SECTIONS_WARNING",
-                        "name": "COMPILER_ORPHAN_SECTIONS_WARNING",
-                        "range": null,
-                        "title": "Place with warning",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "<choice COMPILER_ORPHAN_SECTIONS>",
-                        "help": "Places orphan sections without a warning/error message.",
-                        "id": "COMPILER_ORPHAN_SECTIONS_PLACE",
-                        "name": "COMPILER_ORPHAN_SECTIONS_PLACE",
-                        "range": null,
-                        "title": "Place silently",
-                        "type": "bool"
-                    }
-                ],
-                "depends_on": "!IDF_TARGET_LINUX",
-                "help": "If the linker finds orphan sections, it attempts to place orphan sections after sections of the same\nattribute such as code vs data, loadable vs non-loadable, etc.\nThat means that orphan sections could placed between sections defined in IDF linker scripts.\nThis could lead to corruption of the binary image. Configure the linker action here.",
-                "id": "compiler-options-orphan-sections-handling",
-                "name": "COMPILER_ORPHAN_SECTIONS",
-                "title": "Orphan sections handling",
-                "type": "choice"
             }
         ],
         "depends_on": null,
@@ -5387,7 +5211,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "EFUSE_VIRTUAL && !IDF_TARGET_LINUX",
+                                "depends_on": "EFUSE_VIRTUAL",
                                 "help": "In addition to the \"Simulate eFuse operations in RAM\" option, this option just adds\na feature to keep eFuses after reboots in flash memory. To use this mode the partition_table\nshould have the `efuse` partition. partition.csv: \"efuse_em, data, efuse,   ,   0x2000,\"\n\nDuring startup, the eFuses are copied from flash or,\nin case if flash is empty, from real eFuse to RAM and then update flash.\nThis mode is useful when need to keep changes after reboot\n(testing secure_boot and flash_encryption).",
                                 "id": "EFUSE_VIRTUAL_KEEP_IN_FLASH",
                                 "name": "EFUSE_VIRTUAL_KEEP_IN_FLASH",
@@ -5721,16 +5545,6 @@
                                 "type": "bool"
                             },
                             {
-                                "children": [],
-                                "depends_on": null,
-                                "help": null,
-                                "id": "ESP_MAC_UNIVERSAL_MAC_ADDRESSES",
-                                "name": "ESP_MAC_UNIVERSAL_MAC_ADDRESSES",
-                                "range": null,
-                                "title": null,
-                                "type": "int"
-                            },
-                            {
                                 "children": [
                                     {
                                         "children": [],
@@ -5920,6 +5734,24 @@
                     {
                         "children": [
                             {
+                                "children": [],
+                                "depends_on": "IDF_TARGET_ESP32C3",
+                                "help": "Its not able to stall ESP32C3 systimer in sleep.\nTo fix related RTOS TICK issue, select it to disable related systimer during sleep.\nTODO: IDF-7036",
+                                "id": "ESP_SLEEP_SYSTIMER_STALL_WORKAROUND",
+                                "name": "ESP_SLEEP_SYSTIMER_STALL_WORKAROUND",
+                                "range": null,
+                                "title": "ESP32C3 SYSTIMER Stall Issue Workaround",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": null,
+                        "id": "component-config-hardware-settings-esp_sleep_workaround",
+                        "title": "ESP_SLEEP_WORKAROUND",
+                        "type": "menu"
+                    },
+                    {
+                        "children": [
+                            {
                                 "children": [
                                     {
                                         "children": [],
@@ -6061,7 +5893,7 @@
                             {
                                 "children": [],
                                 "depends_on": "SOC_ETM_SUPPORTED",
-                                "help": "whether to enable the debug log message for ETM core driver.\nNote that, this option only controls the ETM related driver log, won't affect other drivers.",
+                                "help": "Wether to enable the debug log message for ETM core driver.\nNote that, this option only controls the ETM related driver log, won't affect other drivers.",
                                 "id": "ETM_ENABLE_DEBUG_LOG",
                                 "name": "ETM_ENABLE_DEBUG_LOG",
                                 "range": null,
@@ -6099,7 +5931,7 @@
                             {
                                 "children": [],
                                 "depends_on": "SOC_GDMA_SUPPORTED",
-                                "help": "Whether to enable the debug log message for GDMA driver.\nNote that, this option only controls the GDMA driver log, won't affect other drivers.",
+                                "help": "Wether to enable the debug log message for GDMA driver.\nNote that, this option only controls the GDMA driver log, won't affect other drivers.",
                                 "id": "GDMA_ENABLE_DEBUG_LOG",
                                 "name": "GDMA_ENABLE_DEBUG_LOG",
                                 "range": null,
@@ -6137,16 +5969,6 @@
                             {
                                 "children": [],
                                 "depends_on": "SOC_DW_GDMA_SUPPORTED",
-                                "help": "Place DW_GDMA getter functions (e.g. dw_gdma_link_list_get_item) into IRAM,\nso that these functions can be IRAM-safe and able to be called in the other IRAM interrupt context.",
-                                "id": "DW_GDMA_GETTER_FUNC_IN_IRAM",
-                                "name": "DW_GDMA_GETTER_FUNC_IN_IRAM",
-                                "range": null,
-                                "title": null,
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "SOC_DW_GDMA_SUPPORTED",
                                 "help": "This will ensure the DW_GDMA interrupt handler is IRAM-Safe, allow to avoid flash\ncache misses, and also be able to run whilst the cache is disabled.\n(e.g. SPI Flash write).",
                                 "id": "DW_GDMA_ISR_IRAM_SAFE",
                                 "name": "DW_GDMA_ISR_IRAM_SAFE",
@@ -6157,7 +5979,7 @@
                             {
                                 "children": [],
                                 "depends_on": "SOC_DW_GDMA_SUPPORTED",
-                                "help": "Whether to enable the debug log message for DW_GDMA driver.\nNote that, this option only controls the DW_GDMA driver log, won't affect other drivers.",
+                                "help": "Wether to enable the debug log message for DW_GDMA driver.\nNote that, this option only controls the DW_GDMA driver log, won't affect other drivers.",
                                 "id": "DW_GDMA_ENABLE_DEBUG_LOG",
                                 "name": "DW_GDMA_ENABLE_DEBUG_LOG",
                                 "range": null,
@@ -6353,6 +6175,13 @@
                         "depends_on": "SOC_CRYPTO_DPA_PROTECTION_SUPPORTED",
                         "id": "component-config-hardware-settings-crypto-dpa-protection",
                         "title": "Crypto DPA Protection",
+                        "type": "menu"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_MULTI_USAGE_LDO_SUPPORTED",
+                        "id": "component-config-hardware-settings-ldo-config",
+                        "title": "LDO Config",
                         "type": "menu"
                     },
                     {
@@ -8413,351 +8242,217 @@
                     {
                         "children": [
                             {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_DEFAULT_LEVEL_NONE",
-                                        "name": "LOG_DEFAULT_LEVEL_NONE",
-                                        "range": null,
-                                        "title": "No output",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_DEFAULT_LEVEL_ERROR",
-                                        "name": "LOG_DEFAULT_LEVEL_ERROR",
-                                        "range": null,
-                                        "title": "Error",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_DEFAULT_LEVEL_WARN",
-                                        "name": "LOG_DEFAULT_LEVEL_WARN",
-                                        "range": null,
-                                        "title": "Warning",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_DEFAULT_LEVEL_INFO",
-                                        "name": "LOG_DEFAULT_LEVEL_INFO",
-                                        "range": null,
-                                        "title": "Info",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_DEFAULT_LEVEL_DEBUG",
-                                        "name": "LOG_DEFAULT_LEVEL_DEBUG",
-                                        "range": null,
-                                        "title": "Debug",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice LOG_DEFAULT_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_DEFAULT_LEVEL_VERBOSE",
-                                        "name": "LOG_DEFAULT_LEVEL_VERBOSE",
-                                        "range": null,
-                                        "title": "Verbose",
-                                        "type": "bool"
-                                    }
-                                ],
-                                "depends_on": null,
-                                "help": "Specify how much output to see in logs by default.\nYou can set lower verbosity level at runtime using\nesp_log_level_set() function if LOG_DYNAMIC_LEVEL_CONTROL\nis enabled.\n\nBy default, this setting limits which log statements\nare compiled into the program. For example, selecting\n\"Warning\" would mean that changing log level to \"Debug\"\nat runtime will not be possible. To allow increasing log\nlevel above the default at runtime, see the next option.",
-                                "id": "component-config-log-log-level-default-log-verbosity",
-                                "name": "LOG_DEFAULT_LEVEL",
-                                "title": "Default log verbosity",
-                                "type": "choice"
+                                "children": [],
+                                "depends_on": "<choice LOG_DEFAULT_LEVEL>",
+                                "help": null,
+                                "id": "LOG_DEFAULT_LEVEL_NONE",
+                                "name": "LOG_DEFAULT_LEVEL_NONE",
+                                "range": null,
+                                "title": "No output",
+                                "type": "bool"
                             },
                             {
                                 "children": [],
-                                "depends_on": null,
+                                "depends_on": "<choice LOG_DEFAULT_LEVEL>",
                                 "help": null,
-                                "id": "LOG_DEFAULT_LEVEL",
-                                "name": "LOG_DEFAULT_LEVEL",
+                                "id": "LOG_DEFAULT_LEVEL_ERROR",
+                                "name": "LOG_DEFAULT_LEVEL_ERROR",
                                 "range": null,
-                                "title": null,
-                                "type": "int"
-                            },
-                            {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice LOG_MAXIMUM_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_MAXIMUM_EQUALS_DEFAULT",
-                                        "name": "LOG_MAXIMUM_EQUALS_DEFAULT",
-                                        "range": null,
-                                        "title": "Same as default",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 1 && <choice LOG_MAXIMUM_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_MAXIMUM_LEVEL_ERROR",
-                                        "name": "LOG_MAXIMUM_LEVEL_ERROR",
-                                        "range": null,
-                                        "title": "Error",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 2 && <choice LOG_MAXIMUM_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_MAXIMUM_LEVEL_WARN",
-                                        "name": "LOG_MAXIMUM_LEVEL_WARN",
-                                        "range": null,
-                                        "title": "Warning",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 3 && <choice LOG_MAXIMUM_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_MAXIMUM_LEVEL_INFO",
-                                        "name": "LOG_MAXIMUM_LEVEL_INFO",
-                                        "range": null,
-                                        "title": "Info",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 4 && <choice LOG_MAXIMUM_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_MAXIMUM_LEVEL_DEBUG",
-                                        "name": "LOG_MAXIMUM_LEVEL_DEBUG",
-                                        "range": null,
-                                        "title": "Debug",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "LOG_DEFAULT_LEVEL < 5 && <choice LOG_MAXIMUM_LEVEL>",
-                                        "help": null,
-                                        "id": "LOG_MAXIMUM_LEVEL_VERBOSE",
-                                        "name": "LOG_MAXIMUM_LEVEL_VERBOSE",
-                                        "range": null,
-                                        "title": "Verbose",
-                                        "type": "bool"
-                                    }
-                                ],
-                                "depends_on": null,
-                                "help": "This config option sets the highest log verbosity that it's possible to select\nat runtime by calling esp_log_level_set(). This level may be higher than\nthe default verbosity level which is set when the app starts up.\n\nThis can be used enable debugging output only at a critical point, for a particular\ntag, or to minimize startup time but then enable more logs once the firmware has\nloaded.\n\nNote that increasing the maximum available log level will increase the firmware\nbinary size.\n\nThis option only applies to logging from the app, the bootloader log level is\nfixed at compile time to the separate \"Bootloader log verbosity\" setting.",
-                                "id": "component-config-log-log-level-maximum-log-verbosity",
-                                "name": "LOG_MAXIMUM_LEVEL",
-                                "title": "Maximum log verbosity",
-                                "type": "choice"
+                                "title": "Error",
+                                "type": "bool"
                             },
                             {
                                 "children": [],
-                                "depends_on": null,
+                                "depends_on": "<choice LOG_DEFAULT_LEVEL>",
                                 "help": null,
-                                "id": "LOG_MAXIMUM_LEVEL",
-                                "name": "LOG_MAXIMUM_LEVEL",
+                                "id": "LOG_DEFAULT_LEVEL_WARN",
+                                "name": "LOG_DEFAULT_LEVEL_WARN",
                                 "range": null,
-                                "title": null,
-                                "type": "int"
+                                "title": "Warning",
+                                "type": "bool"
                             },
                             {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "depends_on": null,
-                                        "help": "Enables an additional global \"master\" log level check that occurs before a log tag cache\nlookup. This is useful if you want to compile in a lot of logs that are selectable at\nruntime, but avoid the performance hit during periods where you don't want log output.\n\nExamples include remote log forwarding, or disabling logs during a time-critical or\nCPU-intensive section and re-enabling them later. Results in larger program size\ndepending on number of logs compiled in.\n\nIf enabled, defaults to LOG_DEFAULT_LEVEL and can be set using\nesp_log_set_level_master(). This check takes precedence over ESP_LOG_LEVEL_LOCAL.",
-                                        "id": "LOG_MASTER_LEVEL",
-                                        "name": "LOG_MASTER_LEVEL",
-                                        "range": null,
-                                        "title": "Enable global master log level",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": null,
-                                        "help": "Enabling this option allows dynamic changes to the log level at runtime\n(using esp_log_level_set()), providing the ability to increase or decrease\nthe log level during program execution.\nIf disabled, the log level remains static once set at compile-time and calling\nesp_log_level_set() will have no effect.\nIf binary size is a critical consideration and dynamic log level changes are not needed,\nconsider disabling this option when LOG_TAG_LEVEL_IMPL_NONE=y to minimize program size.",
-                                        "id": "LOG_DYNAMIC_LEVEL_CONTROL",
-                                        "name": "LOG_DYNAMIC_LEVEL_CONTROL",
-                                        "range": null,
-                                        "title": "Enable dynamic log level changes at runtime",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [
-                                            {
-                                                "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_IMPL>",
-                                                "help": "This option disables the ability to set the log level per tag.\nThe ability to change the log level at runtime depends on LOG_DYNAMIC_LEVEL_CONTROL.\nIf LOG_DYNAMIC_LEVEL_CONTROL is disabled, then changing the log level at runtime\nusing `esp_log_level_set()` is not possible.\nThis implementation is suitable for highly constrained environments.",
-                                                "id": "LOG_TAG_LEVEL_IMPL_NONE",
-                                                "name": "LOG_TAG_LEVEL_IMPL_NONE",
-                                                "range": null,
-                                                "title": "None",
-                                                "type": "bool"
-                                            },
-                                            {
-                                                "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_IMPL>",
-                                                "help": "Select this option to use the linked list-only implementation (no cache) for log level retrieval.\nThis approach searches the linked list of all tags for the log level, which may be slower\nfor a large number of tags but may have lower memory requirements than the CACHE approach.\nThe linked list approach compares the whole strings of log tags for finding the log level.",
-                                                "id": "LOG_TAG_LEVEL_IMPL_LINKED_LIST",
-                                                "name": "LOG_TAG_LEVEL_IMPL_LINKED_LIST",
-                                                "range": null,
-                                                "title": "Linked List",
-                                                "type": "bool"
-                                            },
-                                            {
-                                                "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_IMPL>",
-                                                "help": "Select this option to use a hybrid mode: cache in combination with the linked list\nfor log tag level checks. This hybrid approach offers a balance between speed and memory usage.\n\nThe cache stores recently accessed log tags and their corresponding log levels, providing\nfaster lookups for frequently used tags. The cache approach compares the tag pointers, which is\nfaster than comparing the whole strings.\n\nFor less frequently used tags, the linked list is used to search for the log level, which may be\nslower for a large number of tags but has lower memory requirements compared to a full cache.\n\nThis hybrid approach aims to improve the efficiency of log level retrieval by combining the benefits\nof both cache and linked list implementations.",
-                                                "id": "LOG_TAG_LEVEL_IMPL_CACHE_AND_LINKED_LIST",
-                                                "name": "LOG_TAG_LEVEL_IMPL_CACHE_AND_LINKED_LIST",
-                                                "range": null,
-                                                "title": "Cache + Linked List",
-                                                "type": "bool"
-                                            }
-                                        ],
-                                        "depends_on": null,
-                                        "help": "Choose the per-tag log level implementation for the log library. This functionality is used\nto enable/disable logs for a particular tag at run time. Applicable only for\napplication logs (i.e., not bootloader logs).",
-                                        "id": "component-config-log-log-level-level-settings-method-of-tag-level-checks",
-                                        "name": "LOG_TAG_LEVEL_IMPL",
-                                        "title": "Method of tag level checks",
-                                        "type": "choice"
-                                    },
-                                    {
-                                        "children": [
-                                            {
-                                                "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_CACHE_IMPL>",
-                                                "help": "This option enables the use of a simple array-based cache implementation for storing and\nretrieving log tag levels. There is no additional code that reorders the cache for fast lookups.\nSuitable for projects where memory usage optimization is crucial and the simplicity of implementation\nis preferred.",
-                                                "id": "LOG_TAG_LEVEL_CACHE_ARRAY",
-                                                "name": "LOG_TAG_LEVEL_CACHE_ARRAY",
-                                                "range": null,
-                                                "title": "Array",
-                                                "type": "bool"
-                                            },
-                                            {
-                                                "children": [],
-                                                "depends_on": "<choice LOG_TAG_LEVEL_CACHE_IMPL>",
-                                                "help": "This option enables the use of a binary min-heap-based cache implementation for efficient\nstorage and retrieval of log tag levels. It does automatically optimizing cache for fast lookups.\nSuitable for projects where speed of lookup is critical and memory usage can accommodate\nthe overhead of maintaining a binary min-heap structure.",
-                                                "id": "LOG_TAG_LEVEL_CACHE_BINARY_MIN_HEAP",
-                                                "name": "LOG_TAG_LEVEL_CACHE_BINARY_MIN_HEAP",
-                                                "range": null,
-                                                "title": "Binary Min-Heap",
-                                                "type": "bool"
-                                            }
-                                        ],
-                                        "depends_on": "LOG_TAG_LEVEL_IMPL_CACHE_AND_LINKED_LIST",
-                                        "help": "The cache stores recently accessed log tags (address of tag) and their corresponding log levels,\nproviding faster lookups for frequently used tags. Cache size can be configured using the\nLOG_TAG_LEVEL_IMPL_CACHE_SIZE option. The cache approach compares the tag pointers, which is\nfaster than comparing the whole strings.",
-                                        "id": "component-config-log-log-level-level-settings-cache-implementation",
-                                        "name": "LOG_TAG_LEVEL_CACHE_IMPL",
-                                        "title": "Cache implementation",
-                                        "type": "choice"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "LOG_TAG_LEVEL_CACHE_ARRAY || LOG_TAG_LEVEL_CACHE_BINARY_MIN_HEAP",
-                                        "help": "This option sets the size of the cache used for log tag entries. The cache stores recently accessed\nlog tags and their corresponding log levels, which helps improve the efficiency of log level retrieval.\nThe value must be a power of 2 minus 1 (e.g., 1, 3, 7, 15, 31, 63, 127, 255, ...)\nto ensure proper cache behavior. For LOG_TAG_LEVEL_CACHE_ARRAY option the value can be any,\nwithout restrictions.\n\nNote: A larger cache size can improve lookup performance for frequently used log tags but may consume\nmore memory. Conversely, a smaller cache size reduces memory usage but may lead to more frequent cache\nevictions for less frequently used log tags.",
-                                        "id": "LOG_TAG_LEVEL_IMPL_CACHE_SIZE",
-                                        "name": "LOG_TAG_LEVEL_IMPL_CACHE_SIZE",
-                                        "range": null,
-                                        "title": "Log Tag Cache Size",
-                                        "type": "int"
-                                    }
-                                ],
-                                "depends_on": null,
-                                "id": "component-config-log-log-level-level-settings",
-                                "title": "Level Settings",
-                                "type": "menu"
+                                "children": [],
+                                "depends_on": "<choice LOG_DEFAULT_LEVEL>",
+                                "help": null,
+                                "id": "LOG_DEFAULT_LEVEL_INFO",
+                                "name": "LOG_DEFAULT_LEVEL_INFO",
+                                "range": null,
+                                "title": "Info",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "<choice LOG_DEFAULT_LEVEL>",
+                                "help": null,
+                                "id": "LOG_DEFAULT_LEVEL_DEBUG",
+                                "name": "LOG_DEFAULT_LEVEL_DEBUG",
+                                "range": null,
+                                "title": "Debug",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "<choice LOG_DEFAULT_LEVEL>",
+                                "help": null,
+                                "id": "LOG_DEFAULT_LEVEL_VERBOSE",
+                                "name": "LOG_DEFAULT_LEVEL_VERBOSE",
+                                "range": null,
+                                "title": "Verbose",
+                                "type": "bool"
                             }
                         ],
                         "depends_on": null,
-                        "id": "component-config-log-log-level",
-                        "title": "Log Level",
-                        "type": "menu"
+                        "help": "Specify how much output to see in logs by default.\nYou can set lower verbosity level at runtime using\nesp_log_level_set function.\n\nBy default, this setting limits which log statements\nare compiled into the program. For example, selecting\n\"Warning\" would mean that changing log level to \"Debug\"\nat runtime will not be possible. To allow increasing log\nlevel above the default at runtime, see the next option.",
+                        "id": "component-config-log-output-default-log-verbosity",
+                        "name": "LOG_DEFAULT_LEVEL",
+                        "title": "Default log verbosity",
+                        "type": "choice"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "LOG_DEFAULT_LEVEL",
+                        "name": "LOG_DEFAULT_LEVEL",
+                        "range": null,
+                        "title": null,
+                        "type": "int"
                     },
                     {
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": null,
-                                "help": "Enable ANSI terminal color codes.\nIn order to view these, your terminal program must support ANSI color codes.",
-                                "id": "LOG_COLORS",
-                                "name": "LOG_COLORS",
+                                "depends_on": "<choice LOG_MAXIMUM_LEVEL>",
+                                "help": null,
+                                "id": "LOG_MAXIMUM_EQUALS_DEFAULT",
+                                "name": "LOG_MAXIMUM_EQUALS_DEFAULT",
                                 "range": null,
-                                "title": "Color",
+                                "title": "Same as default",
                                 "type": "bool"
                             },
                             {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "depends_on": "No && <choice LOG_TIMESTAMP_SOURCE>",
-                                        "help": null,
-                                        "id": "LOG_TIMESTAMP_SOURCE_NONE",
-                                        "name": "LOG_TIMESTAMP_SOURCE_NONE",
-                                        "range": null,
-                                        "title": "None",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice LOG_TIMESTAMP_SOURCE>",
-                                        "help": null,
-                                        "id": "LOG_TIMESTAMP_SOURCE_RTOS",
-                                        "name": "LOG_TIMESTAMP_SOURCE_RTOS",
-                                        "range": null,
-                                        "title": "Milliseconds Since Boot",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice LOG_TIMESTAMP_SOURCE>",
-                                        "help": null,
-                                        "id": "LOG_TIMESTAMP_SOURCE_SYSTEM",
-                                        "name": "LOG_TIMESTAMP_SOURCE_SYSTEM",
-                                        "range": null,
-                                        "title": "System Time (HH:MM:SS.sss)",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "No && <choice LOG_TIMESTAMP_SOURCE>",
-                                        "help": null,
-                                        "id": "LOG_TIMESTAMP_SOURCE_SYSTEM_FULL",
-                                        "name": "LOG_TIMESTAMP_SOURCE_SYSTEM_FULL",
-                                        "range": null,
-                                        "title": "System Time (YY-MM-DD HH:MM:SS.sss)",
-                                        "type": "bool"
-                                    }
-                                ],
-                                "depends_on": null,
-                                "help": "Choose what sort of timestamp is displayed in the log output:\n\n- \"None\" - The log will only contain the actual log messages themselves\n  without any time-related information. Avoiding timestamps can help conserve\n  processing power and memory. It might useful when you\n  perform log analysis or debugging, sometimes it's more straightforward\n  to work with logs that lack timestamps, especially if the time of occurrence\n  is not critical for understanding the issues.\n\n- \"Milliseconds since boot\" is calculated from the RTOS tick count multiplied\n  by the tick period. This time will reset after a software reboot.\n  e.g. (90000)\n\n- \"System time (HH:MM:SS.sss)\" is taken from POSIX time functions which use the chip's\n  RTC and high resolution timers to maintain an accurate time. The system time is\n  initialized to 0 on startup, it can be set with an SNTP sync, or with\n  POSIX time functions. This time will not reset after a software reboot.\n  e.g. (00:01:30.000)\n\n- \"System time (YY-MM-DD HH:MM:SS.sss)\" it is the same as the above,\n  but also prints the date as well.\n\n- NOTE: Currently this will not get used in logging from binary blobs\n  (i.e WiFi & Bluetooth libraries), these will always print\n  milliseconds since boot.",
-                                "id": "component-config-log-format-timestamp",
-                                "name": "LOG_TIMESTAMP_SOURCE",
-                                "title": "Timestamp",
-                                "type": "choice"
+                                "children": [],
+                                "depends_on": "LOG_DEFAULT_LEVEL < 1 && <choice LOG_MAXIMUM_LEVEL>",
+                                "help": null,
+                                "id": "LOG_MAXIMUM_LEVEL_ERROR",
+                                "name": "LOG_MAXIMUM_LEVEL_ERROR",
+                                "range": null,
+                                "title": "Error",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LOG_DEFAULT_LEVEL < 2 && <choice LOG_MAXIMUM_LEVEL>",
+                                "help": null,
+                                "id": "LOG_MAXIMUM_LEVEL_WARN",
+                                "name": "LOG_MAXIMUM_LEVEL_WARN",
+                                "range": null,
+                                "title": "Warning",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LOG_DEFAULT_LEVEL < 3 && <choice LOG_MAXIMUM_LEVEL>",
+                                "help": null,
+                                "id": "LOG_MAXIMUM_LEVEL_INFO",
+                                "name": "LOG_MAXIMUM_LEVEL_INFO",
+                                "range": null,
+                                "title": "Info",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LOG_DEFAULT_LEVEL < 4 && <choice LOG_MAXIMUM_LEVEL>",
+                                "help": null,
+                                "id": "LOG_MAXIMUM_LEVEL_DEBUG",
+                                "name": "LOG_MAXIMUM_LEVEL_DEBUG",
+                                "range": null,
+                                "title": "Debug",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LOG_DEFAULT_LEVEL < 5 && <choice LOG_MAXIMUM_LEVEL>",
+                                "help": null,
+                                "id": "LOG_MAXIMUM_LEVEL_VERBOSE",
+                                "name": "LOG_MAXIMUM_LEVEL_VERBOSE",
+                                "range": null,
+                                "title": "Verbose",
+                                "type": "bool"
                             }
                         ],
                         "depends_on": null,
-                        "id": "component-config-log-format",
-                        "title": "Format",
-                        "type": "menu"
+                        "help": "This config option sets the highest log verbosity that it's possible to select\nat runtime by calling esp_log_level_set(). This level may be higher than\nthe default verbosity level which is set when the app starts up.\n\nThis can be used enable debugging output only at a critical point, for a particular\ntag, or to minimize startup time but then enable more logs once the firmware has\nloaded.\n\nNote that increasing the maximum available log level will increase the firmware\nbinary size.\n\nThis option only applies to logging from the app, the bootloader log level is\nfixed at compile time to the separate \"Bootloader log verbosity\" setting.",
+                        "id": "component-config-log-output-maximum-log-verbosity",
+                        "name": "LOG_MAXIMUM_LEVEL",
+                        "title": "Maximum log verbosity",
+                        "type": "choice"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "LOG_MAXIMUM_LEVEL",
+                        "name": "LOG_MAXIMUM_LEVEL",
+                        "range": null,
+                        "title": null,
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enables an additional global \"master\" log level check that occurs\nbefore a log tag cache lookup. This is useful if you want to\ncompile in a lot of logs that are selectable at runtime, but avoid the\nperformance hit during periods where you don't want log output. Examples\ninclude remote log forwarding, or disabling logs during a time-critical\nor CPU-intensive section and re-enabling them later. Results in\nlarger program size depending on number of logs compiled in.\n\nIf enabled, defaults to LOG_DEFAULT_LEVEL and can be set using\nesp_log_set_level_master().\nThis check takes precedence over ESP_LOG_LEVEL_LOCAL.",
+                        "id": "LOG_MASTER_LEVEL",
+                        "name": "LOG_MASTER_LEVEL",
+                        "range": null,
+                        "title": "Enable global master log level",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable ANSI terminal color codes in bootloader output.\n\nIn order to view these, your terminal program must support ANSI color codes.",
+                        "id": "LOG_COLORS",
+                        "name": "LOG_COLORS",
+                        "range": null,
+                        "title": "Use ANSI terminal colors in log output",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "<choice LOG_TIMESTAMP_SOURCE>",
+                                "help": null,
+                                "id": "LOG_TIMESTAMP_SOURCE_RTOS",
+                                "name": "LOG_TIMESTAMP_SOURCE_RTOS",
+                                "range": null,
+                                "title": "Milliseconds Since Boot",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "<choice LOG_TIMESTAMP_SOURCE>",
+                                "help": null,
+                                "id": "LOG_TIMESTAMP_SOURCE_SYSTEM",
+                                "name": "LOG_TIMESTAMP_SOURCE_SYSTEM",
+                                "range": null,
+                                "title": "System Time",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": null,
+                        "help": "Choose what sort of timestamp is displayed in the log output:\n\n- Milliseconds since boot is calulated from the RTOS tick count multiplied\n  by the tick period. This time will reset after a software reboot.\n  e.g. (90000)\n\n- System time is taken from POSIX time functions which use the chip's\n  RTC and high resoultion timers to maintain an accurate time. The system time is\n  initialized to 0 on startup, it can be set with an SNTP sync, or with\n  POSIX time functions. This time will not reset after a software reboot.\n  e.g. (00:01:30.000)\n\n- NOTE: Currently this will not get used in logging from binary blobs\n  (i.e WiFi & Bluetooth libraries), these will always print\n  milliseconds since boot.",
+                        "id": "component-config-log-output-log-timestamps",
+                        "name": "LOG_TIMESTAMP_SOURCE",
+                        "title": "Log Timestamps",
+                        "type": "choice"
                     }
                 ],
                 "depends_on": null,
-                "id": "component-config-log",
-                "title": "Log",
+                "id": "component-config-log-output",
+                "title": "Log output",
                 "type": "menu"
             },
             {
@@ -8796,7 +8491,7 @@
                             }
                         ],
                         "depends_on": null,
-                        "help": "This option allows configuring the desired line endings sent to UART\nwhen a newline ('\\n', LF) appears on stdout.\nThree options are possible:\n\nCRLF: whenever LF is encountered, prepend it with CR\n\nLF: no modification is applied, stdout is sent as is\n\nCR: each occurrence of LF is replaced with CR\n\nThis option doesn't affect behavior of the UART driver (drivers/uart.h).",
+                        "help": "This option allows configuring the desired line endings sent to UART\nwhen a newline ('\\n', LF) appears on stdout.\nThree options are possible:\n\nCRLF: whenever LF is encountered, prepend it with CR\n\nLF: no modification is applied, stdout is sent as is\n\nCR: each occurence of LF is replaced with CR\n\nThis option doesn't affect behavior of the UART driver (drivers/uart.h).",
                         "id": "component-config-newlib-line-ending-for-uart-output",
                         "name": "NEWLIB_STDOUT_LINE_ENDING",
                         "title": "Line ending for UART output",
@@ -8836,7 +8531,7 @@
                             }
                         ],
                         "depends_on": null,
-                        "help": "This option allows configuring which input sequence on UART produces\na newline ('\\n', LF) on stdin.\nThree options are possible:\n\nCRLF: CRLF is converted to LF\n\nLF: no modification is applied, input is sent to stdin as is\n\nCR: each occurrence of CR is replaced with LF\n\nThis option doesn't affect behavior of the UART driver (drivers/uart.h).",
+                        "help": "This option allows configuring which input sequence on UART produces\na newline ('\\n', LF) on stdin.\nThree options are possible:\n\nCRLF: CRLF is converted to LF\n\nLF: no modification is applied, input is sent to stdin as is\n\nCR: each occurence of CR is replaced with LF\n\nThis option doesn't affect behavior of the UART driver (drivers/uart.h).",
                         "id": "component-config-newlib-line-ending-for-uart-input",
                         "name": "NEWLIB_STDIN_LINE_ENDING",
                         "title": "Line ending for UART input",
@@ -8896,7 +8591,7 @@
                             }
                         ],
                         "depends_on": null,
-                        "help": "This setting defines which hardware timers are used to\nimplement 'gettimeofday' and 'time' functions in C library.\n\n- If both high-resolution (systimer for all targets except ESP32)\n    and RTC timers are used, timekeeping will continue in deep sleep.\n    Time will be reported at 1 microsecond resolution.\n    This is the default, and the recommended option.\n- If only high-resolution timer (systimer) is used, gettimeofday will\n    provide time at microsecond resolution.\n    Time will not be preserved when going into deep sleep mode.\n- If only RTC timer is used, timekeeping will continue in\n    deep sleep, but time will be measured at 6.(6) microsecond\n    resolution. Also the gettimeofday function itself may take\n    longer to run.\n- If no timers are used, gettimeofday and time functions\n    return -1 and set errno to ENOSYS; they are defined as weak,\n    so they could be overridden.\n    If you want to customize gettimeofday() and other time functions,\n    please choose this option and refer to the 'time.c' source file\n    for the exact prototypes of these functions.\n\n- When RTC is used for timekeeping, two RTC_STORE registers are\n    used to keep time in deep sleep mode.",
+                        "help": "This setting defines which hardware timers are used to\nimplement 'gettimeofday' and 'time' functions in C library.\n\n- If both high-resolution (systimer for all targets except ESP32)\n    and RTC timers are used, timekeeping will continue in deep sleep.\n    Time will be reported at 1 microsecond resolution.\n    This is the default, and the recommended option.\n- If only high-resolution timer (systimer) is used, gettimeofday will\n    provide time at microsecond resolution.\n    Time will not be preserved when going into deep sleep mode.\n- If only RTC timer is used, timekeeping will continue in\n    deep sleep, but time will be measured at 6.(6) microsecond\n    resolution. Also the gettimeofday function itself may take\n    longer to run.\n- If no timers are used, gettimeofday and time functions\n    return -1 and set errno to ENOSYS.\n- When RTC is used for timekeeping, two RTC_STORE registers are\n    used to keep time in deep sleep mode.",
                         "id": "component-config-newlib-timers-used-for-gettimeofday-function",
                         "name": "NEWLIB_TIME_SYSCALL",
                         "title": "Timers used for gettimeofday function",
@@ -9511,7 +9206,7 @@
     {
         "children": [],
         "depends_on": null,
-        "help": "By enabling this option, ESP-IDF experimental feature options will be visible.\n\nNote you should still enable a certain experimental feature option to use it, and you\nshould read the corresponding risk warning and known issue list carefully.\n\nCurrent experimental feature list:\n\n- CONFIG_ESPTOOLPY_FLASHFREQ_120M && CONFIG_ESPTOOLPY_FLASH_SAMPLE_MODE_DTR\n- CONFIG_SPIRAM_SPEED_120M && CONFIG_SPIRAM_MODE_OCT\n- CONFIG_BOOTLOADER_CACHE_32BIT_ADDR_QUAD_FLASH\n- CONFIG_MBEDTLS_USE_CRYPTO_ROM_IMPL\n- CONFIG_ESP_WIFI_EAP_TLS1_3\n- CONFIG_ESP_WIFI_ENABLE_ROAMING_APP",
+        "help": "By enabling this option, ESP-IDF experimental feature options will be visible.\n\nNote you should still enable a certain experimental feature option to use it, and you\nshould read the corresponding risk warning and known issue list carefully.\n\nCurrent experimental feature list:\n\n- CONFIG_ESPTOOLPY_FLASHFREQ_120M && CONFIG_ESPTOOLPY_FLASH_SAMPLE_MODE_DTR\n- CONFIG_SPIRAM_SPEED_120M && CONFIG_SPIRAM_MODE_OCT\n- CONFIG_BOOTLOADER_CACHE_32BIT_ADDR_QUAD_FLASH\n- CONFIG_MBEDTLS_USE_CRYPTO_ROM_IMPL",
         "id": "IDF_EXPERIMENTAL_FEATURES",
         "name": "IDF_EXPERIMENTAL_FEATURES",
         "range": null,

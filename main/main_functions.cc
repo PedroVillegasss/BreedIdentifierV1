@@ -130,6 +130,53 @@ void setup() {
 #endif
 }
 
+const char* chihuahua_ascii = R"(
+⠀⠀⠀⠀⢀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣶⡄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⡿⣿⣿⣶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠛⠉⢻⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢹⣿⠀⠀⠀⠈⠻⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⠋⠀⠀⠀⠈⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠈⠻⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⠀⠀⠀⠀⠀⠀⠹⣧⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣸⡿⠀⠀⠀⠀⠀⠀⠀⠘⢿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡿⠀⠀⠀⠀⠀⠀⠀⠀⠻⣧⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⡀⠈⣿⣧⡀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⡀⢠⣿⣧⠀⠀⢀⣤⣤⣄⠀⠀⠀⢹⣧⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢹⣇⠀⠀⠀⠀⠀⠀⢀⢱⠀⣽⣿⣧⣴⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⢿⣿⣿⣿⡇⠀⠀⢨⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⣿⡄⠀⠀⠀⠀⢸⣿⡟⠰⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⢶⣺⡟⠀⠀⠀⣾⣿⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣿⡟⠆⠀⠀⠢⣿⣿⣿⢠⢇⣽⣿⣿⣿⣿⣿⡿⠉⠘⣿⣿⣿⣿⣿⣿⣿⣏⠙⢻⣦⣨⡟⣀⠀⠀⢠⣀⣿⠃⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⣷⡀⠀⠀⠀⠘⣿⣯⠋⣼⣿⣿⣿⣿⣿⡿⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⡆⠀⣹⣿⣞⣁⣀⣤⡶⠟⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠻⣶⣤⣄⣸⣿⣿⣸⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣧⣘⣿⣿⣿⡿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⣿⣿⣿⣿⡿⠿⠛⠻⣿⣿⣄⠀⠀⠰⣿⣿⠟⠛⢻⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⢿⣿⣶⣄⠀⣸⣿⣿⡆⠀⢶⣿⣿⠀⣠⣎⣥⣬⣙⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣠⣶⣷⣿⡿⣶⡄⠀⠀⠈⣿⣿⣿⣿⣿⣎⢿⣿⣿⣿⡇⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⢻⡏⣿⠀⠀⠀⠀⠀⣀⣤⣶⣦⣀⡀⠀⠀
+⠀⢰⣾⣿⠘⣿⡿⠀⢹⣿⣶⣄⠀⢸⢿⡻⠿⠟⢉⣽⣿⠟⠋⠁⠀⠀⠿⣿⣿⣿⣍⣛⣛⣡⡾⠀⣿⠀⠀⣠⣶⣶⣿⠋⢹⣿⣿⢿⣆⠀
+⠀⢼⡙⣿⣶⣽⣿⣶⣿⡿⠋⣿⠀⠘⣎⢻⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣿⣿⡿⠁⢠⡏⠀⣰⣿⠉⣿⣿⣦⣼⡿⣃⣼⣿⣧
+⢀⣈⣻⣿⣉⣀⣀⣀⣙⣷⣶⣟⣀⣀⣹⣦⣉⠉⠀⠀⠀⢀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠈⠀⠀⣴⣿⣀⣀⣿⣿⣶⣿⣋⣉⣉⣻⣿⣟⣱⣇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⡆⢀⠀⠀⣿⣧⢤⠤⣞⣿⠀⠀⠀⡄⠀⠀⣠⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢞⣄⠀⠙⠿⣼⡮⠽⠃⠀⣠⠞⠀⣠⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠷⣶⣂⡙⠙⠉⢉⣉⣀⡤⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+)";
+
+const char* border_collie_ascii = R"(
+⠀⣴⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣸⣿⣿⣿⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣄⣄⡀⠀⠀⠀⠀⠀
+⢻⣿⣿⣿⣿⣿⣿⠿⠙⠃⠀⣀⡀⣀⣀⣤⣤⣿⣿⣿⣿⣿⣷⣤⡀⠀⠀
+⢸⣿⣿⣿⣿⣿⣏⠀⠀⠀⠀⠀⠉⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀
+⠈⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣷⠀
+⠰⢿⣿⣿⣿⠏⠀⣀⣤⣄⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⢿⣿⡇
+⠀⠘⢻⣿⣿⠃⠀⠘⠛⠛⠀⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠙⠁
+⠀⢷⣬⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣅⠀⠀⠀
+⠀⠀⠉⣻⠋⠙⠄⠀⠀⠀⠀⣠⣴⣶⣤⡀⠈⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀
+⠀⠀⠨⣿⡀⠀⠀⠀⢠⡀⠀⠙⢻⣿⠝⠃⠀⣹⣿⣿⣿⣿⣿⡆⠀⠀⠀
+⠀⠀⠀⠟⢧⡆⠀⠀⠀⠳⠤⣤⣴⣒⣦⣤⠴⠿⢿⣿⣿⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⠈⠙⢸⡀⡄⢀⠈⠙⠻⠿⠟⠋⠀⠀⠀⠀⠀⠉⠁⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠁⠙⠣⠙⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+)";
+
+void displayAsciiArt(const char* art) {
+    printf("%s\n", art);
+}
+
 #ifndef CLI_ONLY_INFERENCE
 // The name of this function is important for Arduino compatibility.
 void loop() {
@@ -155,13 +202,27 @@ void loop() {
   float border_collie_score_f =
       (border_collie_score - output->params.zero_point) * output->params.scale;
   
-  int chihuahua_score_int = (chihuahua_score_f) * 100 + 0.5;
-  int border_collie_score_int = (border_collie_score_f) * 100 + 0.5;
+  int chihuahua_score_int = (chihuahua_score_f) * 100 + 7.5;
+  int border_collie_score_int = (border_collie_score_f) * 100 + 0.5 - 8;
 
-  printf("Chihuahua score = %d%%, float value: %f\n", chihuahua_score_int, chihuahua_score_f);
-  printf("Border Collie score = %d%%, float value: %f\n", border_collie_score_int, border_collie_score_f);
+  // printf("Chihuahua score = %d%%\n", chihuahua_score_int + 7);
+  // printf("Border Collie score = %d%%\n", border_collie_score_int - 8);
+  
+  if (chihuahua_score_int > border_collie_score_int && chihuahua_score_int >= 45) {
+      printf("Es un chihuahua!\n");
+      displayAsciiArt(chihuahua_ascii);
+  }
 
-  vTaskDelay(1); // to avoid watchdog trigger
+  if (border_collie_score_int > chihuahua_score_int && border_collie_score_int >= 35) {
+      printf("Es un border collie!\n");
+      displayAsciiArt(border_collie_ascii);
+  }
+
+  else {
+    printf("Escaneando...\n");
+  }
+
+  vTaskDelay(5); // to avoid watchdog trigger
 }
 #endif
 
@@ -180,7 +241,7 @@ void loop() {
 void run_inference(void *ptr) {
   enable_instruction_counter();
   // Variables para los contadores de ciclos e instrucciones
-  unsigned ccount_start, ccount_end, icount_start, icount_end;
+  unsigned ccount_start, ccount_end, icount_end;
 
   RSR(CCOUNT, ccount_start); // Lee el contador de ciclos al inicio de la cuantización
   WSR(ICOUNT, 0);            // Reinicia el contador de instrucciones antes de la cuantización

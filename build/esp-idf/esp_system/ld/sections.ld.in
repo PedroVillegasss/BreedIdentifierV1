@@ -4,23 +4,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 /*
- * SPDX-FileCopyrightText: 2021-2024 Espressif Systems (Shanghai) CO LTD
+ * SPDX-FileCopyrightText: 2021 Espressif Systems (Shanghai) CO LTD
  *
  * SPDX-License-Identifier: Apache-2.0
  */
 /*
  * Automatically generated file. DO NOT EDIT.
- * Espressif IoT Development Framework (ESP-IDF) 5.4.0 Configuration Header
+ * Espressif IoT Development Framework (ESP-IDF) 5.3.0 Configuration Header
  */
        
 /* List of deprecated options */
 /* CPU instruction prefetch padding size for flash mmap scenario */
-/*
- * PMP region granularity size
- * Software may determine the PMP granularity by writing zero to pmp0cfg, then writing all ones
- * to pmpaddr0, then reading back pmpaddr0. If G is the index of the least-significant bit set,
- * the PMP granularity is 2^G+2 bytes.
- */
 /* CPU instruction prefetch padding size for memory protection scenario */
 /* Memory alignment size for PMS */
     /* rtc timer data (s_rtc_timer_retain_mem, see esp_clk.c files). For rtc_timer_data_in_rtc_mem section. */
@@ -213,7 +207,6 @@ SECTIONS
     *(.UserEnter.literal);
     *(.UserEnter.text);
     . = ALIGN (16);
-    *(.entry.literal)
     *(.entry.text)
     *(.init.literal)
     *(.init)
@@ -336,6 +329,15 @@ SECTIONS
     *(.gnu.linkonce.h.*)
     __XT_EXCEPTION_DESCS_END__ = ABSOLUTE(.);
     *(.xt_except_desc_end)
+    
+ . = ALIGN(4); 
+ __eh_frame = ABSOLUTE(.);
+    KEEP(*(.eh_frame))
+    /**
+     * As we are not linking with crtend.o, which includes the CIE terminator
+     * (see __FRAME_END__ in libgcc sources), it is manually provided here.
+     */
+    LONG(0);
     /**
      * C++ constructor tables.
      *
@@ -459,64 +461,23 @@ SECTIONS
  . = ALIGN(8); 
  _heap_low_start = ABSOLUTE(.);
   } > dram0_0_seg
-  /* DWARF 1 */
-  .debug 0 : { *(.debug) }
-  .line 0 : { *(.line) }
-  /* GNU DWARF 1 extensions */
-  .debug_srcinfo 0 : { *(.debug_srcinfo) }
-  .debug_sfnames 0 : { *(.debug_sfnames) }
-  /* DWARF 1.1 and DWARF 2 */
-  .debug_aranges 0 : { *(.debug_aranges) }
-  .debug_pubnames 0 : { *(.debug_pubnames) }
-  /* DWARF 2 */
-  .debug_info 0 : { *(.debug_info .gnu.linkonce.wi.*) }
-  .debug_abbrev 0 : { *(.debug_abbrev) }
-  .debug_line 0 : { *(.debug_line) }
-  .debug_frame 0 : { *(.debug_frame) }
-  .debug_str 0 : { *(.debug_str) }
-  .debug_loc 0 : { *(.debug_loc) }
-  .debug_macinfo 0 : { *(.debug_macinfo) }
-  .debug_pubtypes 0 : { *(.debug_pubtypes) }
-  /* DWARF 3 */
-  .debug_ranges 0 : { *(.debug_ranges) }
-  /* SGI/MIPS DWARF 2 extensions */
-  .debug_weaknames 0 : { *(.debug_weaknames) }
-  .debug_funcnames 0 : { *(.debug_funcnames) }
-  .debug_typenames 0 : { *(.debug_typenames) }
-  .debug_varnames 0 : { *(.debug_varnames) }
-  /* GNU DWARF 2 extensions */
-  .debug_gnu_pubnames 0 : { *(.debug_gnu_pubnames) }
-  .debug_gnu_pubtypes 0 : { *(.debug_gnu_pubtypes) }
-  /* DWARF 4 */
-  .debug_types 0 : { *(.debug_types) }
-  /* DWARF 5 */
-  .debug_addr 0 : { *(.debug_addr) }
-  .debug_line_str 0 : { *(.debug_line_str) }
-  .debug_loclists 0 : { *(.debug_loclists) }
-  .debug_macro 0 : { *(.debug_macro) }
-  .debug_names 0 : { *(.debug_names) }
-  .debug_rnglists 0 : { *(.debug_rnglists) }
-  .debug_str_offsets 0 : { *(.debug_str_offsets) }
-  .comment 0 : { *(.comment) }
-  .note.GNU-stack 0: { *(.note.GNU-stack) }
-/**
- * .xt.prop and .xt.lit sections will be used by the debugger and disassembler
- * to get more information about raw data present in the code.
- * Indeed, it may be required to add some padding at some points in the code
- * in order to align a branch/jump destination on a particular bound.
- * Padding these instructions will generate null bytes that shall be
- * interpreted as data, and not code by the debugger or disassembler.
- * This section will only be present in the ELF file, not in the final binary
- * For more details, check GCC-212
- */
-  .xtensa.info 0: { *(.xtensa.info) }
-  .xt.prop 0 : { *(.xt.prop .xt.prop.* .gnu.linkonce.prop.*) }
-  .xt.lit 0 : { *(.xt.lit .xt.lit.* .gnu.linkonce.p.*) }
-  /DISCARD/ :
+  /**
+   * This section will be used by the debugger and disassembler to get more
+   * information about raw data present in the code.
+   * Indeed, it may be required to add some padding at some points in the code
+   * in order to align a branch/jump destination on a particular bound.
+   * Padding these instructions will generate null bytes that shall be
+   * interpreted as data, and not code by the debugger or disassembler.
+   * This section will only be present in the ELF file, not in the final binary
+   * For more details, check GCC-212
+   */
+  .xt.prop 0 :
   {
-   *(.fini)
-   *(.eh_frame_hdr)
-   *(.eh_frame)
+    KEEP (*(.xt.prop .gnu.linkonce.prop.*))
+  }
+  .xt.lit 0 :
+  {
+    KEEP (*(.xt.lit .gnu.linkonce.p.*))
   }
 }
 ASSERT(((_iram_end - ORIGIN(iram0_0_seg)) <= LENGTH(iram0_0_seg)),

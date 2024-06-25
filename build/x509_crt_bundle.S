@@ -1,4 +1,4 @@
-/* * Data converted from /home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/pedrovillegasss/nn-project/neuronal-network/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

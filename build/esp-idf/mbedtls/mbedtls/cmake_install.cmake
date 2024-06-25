@@ -34,15 +34,14 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/pedrovillegasss/esp/idf-tools/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump")
+  set(CMAKE_OBJDUMP "/home/pedrovillegasss/esp/idf-tools/tools/xtensa-esp-elf/esp-13.2.0_20240305/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
-  include("/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
-  include("/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
-  include("/home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake")
+  include("/home/pedrovillegasss/nn-project/neuronal-network/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
+  include("/home/pedrovillegasss/nn-project/neuronal-network/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
+  include("/home/pedrovillegasss/nn-project/neuronal-network/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
 
 endif()
 

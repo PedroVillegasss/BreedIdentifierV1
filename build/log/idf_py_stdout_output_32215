@@ -1,0 +1,32 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/pedrovillegasss/nn-project/neuronal-network/build/bootloader/esp-idf/esptool_py && /home/pedrovillegasss/esp/idf-tools/python_env/idf5.3_py3.10_env/bin/python /home/pedrovillegasss/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/pedrovillegasss/nn-project/neuronal-network/build/bootloader/bootloader.bin
+Bootloader binary size 0x6f50 bytes. 0xb0 bytes (1%) free.
+[2/7] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main_functions.cc.obj
+In file included from /home/pedrovillegasss/nn-project/neuronal-network/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/tflite_bridge/flatbuffer_conversions_bridge.h:19,
+                 from /home/pedrovillegasss/nn-project/neuronal-network/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_allocator.h:26,
+                 from /home/pedrovillegasss/nn-project/neuronal-network/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.h:26,
+                 from /home/pedrovillegasss/nn-project/neuronal-network/main/main_functions.cc:22:
+/home/pedrovillegasss/nn-project/neuronal-network/managed_components/espressif__esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h: In member function 'T* tflite::BuiltinDataAllocator::AllocatePOD()':
+/home/pedrovillegasss/nn-project/neuronal-network/managed_components/espressif__esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h:46:24: warning: 'template<class _Tp> struct std::is_pod' is deprecated: use 'is_standard_layout && is_trivial' instead [-Wdeprecated-declarations]
+   46 |     static_assert(std::is_pod<T>::value, "Builtin data structure must be POD.");
+      |                        ^~~~~~
+In file included from /home/pedrovillegasss/esp/idf-tools/tools/xtensa-esp-elf/esp-13.2.0_20240305/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/bits/stl_pair.h:60,
+                 from /home/pedrovillegasss/esp/idf-tools/tools/xtensa-esp-elf/esp-13.2.0_20240305/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/utility:69,
+                 from /home/pedrovillegasss/nn-project/neuronal-network/managed_components/espressif__esp-tflite-micro/tensorflow/lite/core/c/common.h:1463,
+                 from /home/pedrovillegasss/nn-project/neuronal-network/managed_components/espressif__esp-tflite-micro/tensorflow/lite/c/common.h:31,
+                 from /home/pedrovillegasss/nn-project/neuronal-network/main/detection_responder.h:22,
+                 from /home/pedrovillegasss/nn-project/neuronal-network/main/main_functions.cc:18:
+/home/pedrovillegasss/esp/idf-tools/tools/xtensa-esp-elf/esp-13.2.0_20240305/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/type_traits:819:5: note: declared here
+  819 |     is_pod
+      |     ^~~~~~
+[3/7] Linking C static library esp-idf/main/libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable person_detection.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.dev3
+Creating esp32 image...
+Merged 3 ELF sections
+Successfully created esp32 image.
+Generated /home/pedrovillegasss/nn-project/neuronal-network/build/person_detection.bin
+[7/7] cd /home/pedrovillegasss/nn-project/neuronal-network/build/esp-idf/esptool_py && /home/pedrovillegasss/esp/idf-tools/python_env/idf5.3_py3.10_env/bin/python /home/pedrovillegasss/esp/idf/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/pedrovillegasss/nn-project/neuronal-network/build/partition_table/partition-table.bin /home/pedrovillegasss/nn-project/neuronal-network/build/person_detection.bin
+person_detection.bin binary size 0x9ba10 bytes. Smallest app partition is 0x180000 bytes. 0xe45f0 bytes (59%) free.

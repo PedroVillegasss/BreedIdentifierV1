@@ -1,4 +1,4 @@
-# Install script for directory: /home/pedrovillegasss/esp/projects_tf/project/breed-identifier-2.0/person_detection/managed_components/espressif__esp32-camera
+# Install script for directory: /home/pedrovillegasss/nn-project/neuronal-network/managed_components/espressif__esp32-camera
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/pedrovillegasss/esp/idf-tools/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump")
+  set(CMAKE_OBJDUMP "/home/pedrovillegasss/esp/idf-tools/tools/xtensa-esp-elf/esp-13.2.0_20240305/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump")
 endif()
 
